@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <name>hbase.zookeeper.quorum</name>
+        <value>192.168.8.163,192.168.8.164,192.168.8.165</value>
+    </property>
+    <property>
+        <name>hbase.defaults.for.version.skip</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>hbase.client.scanner.caching</name>
+        <value>100</value>
+    </property>
+    <property>
+        <name>hbase.hregion.max.filesize</name>
+        <value>262144000</value>
+        <description>
+            256M
+        </description>
+    </property>
+    <property>
+        <name>hbase.regionserver.lease.period</name>
+        <value>600000</value>
+    </property>
+    <property>
+        <name>hbase.rpc.timeout</name>
+        <value>600000</value>
+    </property>
+    <property>
+        <name>zookeeper.znode.parent</name>
+        <value>/hbase-kv</value>
+    </property>
+</configuration>
