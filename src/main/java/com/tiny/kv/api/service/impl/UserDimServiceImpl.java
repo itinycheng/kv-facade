@@ -47,7 +47,7 @@ public class UserDimServiceImpl implements UserDimService {
 
 	public List<UserDimFacade> queryUserData(List<String> userIds, Long groupAliases) throws Exception {
 		List<QueryContext> queries = ProdDimUtils.parseAliasToQueries(groupAliases, UserDimFacade.class);
-		List<UserDimFacade> list = new ArrayList<UserDimFacade>();
+		List<UserDimFacade> list = new ArrayList<>();
 		if(CollectionUtils.isNotEmpty(queries)){
 			for (QueryContext query : queries) {
 				if(StorageMedium.HBASE.equals(query.getType())){

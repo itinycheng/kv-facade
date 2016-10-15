@@ -53,12 +53,12 @@ public class ProdDimServiceImpl implements ProdDimService {
 		if(pids == null || groupAliases == null){
 			return null;
 		}
-		List<ProdDimFacade> facades = new ArrayList<ProdDimFacade>();
+		List<ProdDimFacade> facades = new ArrayList<>();
 		// query action
 		List<QueryContext> queries = ProdDimUtils.parseAliasToQueries(groupAliases, ProdDimFacade.class);
 		if(CollectionUtils.isNotEmpty(queries)){
 			// 类型转换
-			List<String> ids = new ArrayList<String>(pids.size());
+			List<String> ids = new ArrayList<>(pids.size());
 			for (Long pid : pids) {
 				ids.add(pid.toString());
 			}

@@ -20,7 +20,7 @@ public interface UserDimService {
 	 * @throws Exception
 	 * @description
 	 */
-	public UserDimFacade queryUserData(String userId, Long groupAliases) throws Exception;
+	UserDimFacade queryUserData(String userId, Long groupAliases) throws Exception;
 
 	/**
 	 * 
@@ -31,7 +31,7 @@ public interface UserDimService {
 	 * @throws Exception
 	 * @description
 	 */
-	public List<UserDimFacade> queryUserData(List<String> userIds, Long groupAliases) throws Exception;
+	List<UserDimFacade> queryUserData(List<String> userIds, Long groupAliases) throws Exception;
 	
 	
 	/**

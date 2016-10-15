@@ -22,7 +22,7 @@ public class KVLowLevelServiceImpl implements KVLowLevelService {
 	
 	@SuppressWarnings("unchecked")
 	public Map<String, Map<String, String>> queryData(String tableName, String key, List<String> groups) throws Exception {
-		Map<String, List<String>> columnMap = new HashMap<String, List<String>>();
+		Map<String, List<String>> columnMap = new HashMap<>();
 		for (String group : groups) {
 			columnMap.put(group, ListUtils.EMPTY_LIST);
 		}
@@ -32,7 +32,7 @@ public class KVLowLevelServiceImpl implements KVLowLevelService {
 	@SuppressWarnings("unchecked")
 	public Map<String, Map<String, String>> queryData(String tableName, String key, Map<String, List<String>> columnMap)
 			throws Exception {
-		List<String> keys = new ArrayList<String>(1);
+		List<String> keys = new ArrayList<>(1);
 		keys.add(key);
 		Map<String, Map<String, Map<String, String>>> result = queryData(tableName, keys, columnMap);
 		if(MapUtils.isNotEmpty(result)){
@@ -57,7 +57,7 @@ public class KVLowLevelServiceImpl implements KVLowLevelService {
 	}
 	
 	public void deleteData(String tableName, String key, Map<String, String> map) throws Exception {
-		Map<String, Map<String, String>> nestMap = new HashMap<String, Map<String, String>>(1);
+		Map<String, Map<String, String>> nestMap = new HashMap<>(1);
 		nestMap.put(key, map);
 		deleteData(tableName, nestMap);
 	}

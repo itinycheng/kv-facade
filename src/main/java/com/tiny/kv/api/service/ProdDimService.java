@@ -17,10 +17,8 @@ public interface ProdDimService {
 	 * @param pid 商品ID
 	 * @param groupAliases 组别名汇总
 	 * @return {@link ProdDimFacade} 满足条件的结果封装的bean
-	 * @throws Exception
-	 * @description
 	 */
-	public ProdDimFacade queryProdData(Long pid, Long groupAliases) throws Exception;
+	ProdDimFacade queryProdData(Long pid, Long groupAliases) throws Exception;
 
 	/**
 	 * 
@@ -28,12 +26,9 @@ public interface ProdDimService {
 	 * @param pids 商品ID列表
 	 * @param groupAliases 组别名汇总
 	 * @return List<{@link ProdDimFacade}> 满足条件的结果封装的bean
-	 * @throws Exception
-	 * @description
 	 */
-	public List<ProdDimFacade> queryProdData(List<Long> pids, Long groupAliases) throws Exception;
-	
-	
+	List<ProdDimFacade> queryProdData(List<Long> pids, Long groupAliases) throws Exception;
+
 	/**
 	 * TODO
 	 * 还有增、删、改操作，稍后继续
